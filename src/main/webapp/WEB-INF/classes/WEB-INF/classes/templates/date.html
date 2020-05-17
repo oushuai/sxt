@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>dates</title>
+</head>
+<body>
+<!--测试dates,不设置默认浏览器日期格式-->
+<span th:text="${#dates.format(date)}"></span>
+<span th:text="${#dates.format(date,'yyyy/MM/dd')}"></span>
+<span th:text="${#dates.year(date)}"></span>
+<span th:text="${#dates.month(date)}"></span>
+<span th:text="${#dates.day(date)}"></span>
+</body>
+</html>

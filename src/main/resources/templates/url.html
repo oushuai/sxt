@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>测试url</title>
+</head>
+<body>
+<a th:href="@{http://www.baidu.com}">绝对路径</a>
+<a href="http://www.baidu.com">绝对路径</a>
+<div>
+    <a th:href="@{/page}">相对项目根路径路径</a>
+    <hr />
+    <!--相对项目的路径-->
+    <a th:href="@{~/sxt/page}">相对项目路径</a>
+    <a th:href="@{/page(id=1)}">相对路径-传参</a>
+    <!--<a th:href="@{/page(id=1，namezhangsan)}">相对路径-传参</a>-->
+</div>
+<!--相对路径-->
+</body>
+</html>

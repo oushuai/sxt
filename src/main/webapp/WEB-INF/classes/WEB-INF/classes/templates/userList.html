@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1" align="center" width="50%">
+    <tr>
+        <th>ID:</th>
+        <th>Name:</th>
+        <th>Age:</th>
+        <th>Sex:</th>
+        <th>Index:</th>
+        <th>Size:</th>
+    </tr>
+
+        <tr th:each="user,var:${list}">
+            <td th:text="${user.id}"></td>
+            <td th:text="${user.name}"></td>
+            <td th:text="${user.age}"></td>
+            <!--th:if if,else写法-->
+            <td th:if="${user.sex}"><span>男</span></td>
+            <td th:if="${not user.sex}"><span>女</span></td>
+            <!--状态变量常见属性：index，size，count，even/odd:（boolean）偶数或基数;first/last（boolean）-->
+            <td th:text="${var.index}">
+            <td th:text="${var.size}">
+        </tr>
+</table>
+<div>
+    <table border="1" align="center" width="50%">
+        <tr>
+            <th>mapKey:</th>
+            <th>mapValue:</th>
+            <th>ID:</th>
+            <th>Name:</th>
+            <th>Age:</th>
+            <th>Sex:</th>
+        </tr>
+<!--map的遍历-->
+        <tr th:each="maps:${map}">
+            <td th:each="entry:${maps}" th:text="${entry.getKey()}"></td>
+            <td th:each="entry:${maps}" th:text="${entry.value}"></td>
+            <td th:each="entry:${maps}" th:text="${entry.value.id}"></td>
+
+            <td th:each="entry:${maps}" th:text="${entry.value.name}"></td>
+            <td th:each="entry:${maps}" th:text="${entry.value.age}"></td>
+            <!--th:if if,else写法-->
+            <td th:each="entry:${maps}" th:if="${entry.value.sex}"><span>男</span></td>
+            <td th:each="entry:${maps}" th:if="${not entry.value.sex}"><span>女</span></td>
+
+
+
+        </tr>
+    </table>
+</div>
+</body>
+</html>

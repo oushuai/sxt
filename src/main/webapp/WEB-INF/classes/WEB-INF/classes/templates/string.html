@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>string</title>
+</head>
+<body>
+<!--测试strings,indexof,subString,toUpperCase,toLowerCase-->
+<span th:text="${#strings.isEmpty(msg)}"></span>
+<span th:text="${#strings.contains(msg,'t')}"></span>
+<span th:text="${#strings.contains(msg,'hello')}"></span>
+<span th:text="${#strings.startsWith(msg,'hello')}"></span>
+<span th:text="${#strings.endsWith(msg,'world')}"></span>
+<span th:text="${#strings.length(msg)}"></span>
+</body>
+</html>
