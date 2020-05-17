@@ -46,6 +46,7 @@ public class ThymeleafController {
         map.put("user2",new User(2L,"Wudi",28,true));
         map.put("user3",new User(3L,"Tonghua",7,false));
         map.put("user4",new User(4L,"Xiaohei",14,false));
+        map.put("user5",new User(5L,"git",0,false));
         model.addAttribute("map",map);
         return "userList";
     }
